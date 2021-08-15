@@ -14,6 +14,6 @@ namespace SistemaWeb.Data
         {
         }
 
-        public DbSet<SistemaWeb.Models.Funcionarios> Funcionarios { get; set; }
+   
     }
 }

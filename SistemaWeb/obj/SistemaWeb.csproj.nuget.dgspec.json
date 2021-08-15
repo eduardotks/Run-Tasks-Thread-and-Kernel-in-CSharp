@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wesle\\Documents\\ProjetoWeb\\SistemaWeb\\SistemaWeb\\SistemaWeb.csproj": {}
+    "C:\\Users\\Duh Tk\\Desktop\\Projeto C#\\SistemaComercial\\SistemaWeb\\SistemaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wesle\\Documents\\ProjetoWeb\\SistemaWeb\\SistemaWeb\\SistemaWeb.csproj": {
+    "C:\\Users\\Duh Tk\\Desktop\\Projeto C#\\SistemaComercial\\SistemaWeb\\SistemaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wesle\\Documents\\ProjetoWeb\\SistemaWeb\\SistemaWeb\\SistemaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Duh Tk\\Desktop\\Projeto C#\\SistemaComercial\\SistemaWeb\\SistemaWeb.csproj",
         "projectName": "SistemaWeb",
-        "projectPath": "C:\\Users\\wesle\\Documents\\ProjetoWeb\\SistemaWeb\\SistemaWeb\\SistemaWeb.csproj",
-        "packagesPath": "C:\\Users\\wesle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wesle\\Documents\\ProjetoWeb\\SistemaWeb\\SistemaWeb\\obj\\",
+        "projectPath": "C:\\Users\\Duh Tk\\Desktop\\Projeto C#\\SistemaComercial\\SistemaWeb\\SistemaWeb.csproj",
+        "packagesPath": "C:\\Users\\Duh Tk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Duh Tk\\Desktop\\Projeto C#\\SistemaComercial\\SistemaWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wesle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Duh Tk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
