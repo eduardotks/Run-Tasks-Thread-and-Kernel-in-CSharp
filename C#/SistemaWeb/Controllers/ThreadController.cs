@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SistemaWeb.Controllers
 {
-    public class LoginController : Controller
+    public class ThreadController : Controller
     {
-        public IActionResult TelaLogin()
+        public IActionResult Thread()
         {
             return View();
         }
