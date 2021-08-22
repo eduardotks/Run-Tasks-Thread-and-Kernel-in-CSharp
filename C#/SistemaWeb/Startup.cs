@@ -58,7 +58,7 @@ namespace SistemaWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=TelaLogin}/{id?}");
+                    pattern: "{controller=Thread}/{action=Thread}/{id?}");
             });
         }
     }
