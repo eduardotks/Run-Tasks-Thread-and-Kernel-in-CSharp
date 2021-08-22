@@ -1914,7 +1914,6 @@ C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\bin\Debug\
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\SistemaWeb.csprojAssemblyReference.cache
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\staticwebassets\SistemaWeb.StaticWebAssets.Manifest.cache
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\staticwebassets\SistemaWeb.StaticWebAssets.xml
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\SistemaWeb.MvcApplicationPartsAssemblyInfo.cs
@@ -1937,4 +1936,6 @@ C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\SistemaWeb.csproj.CopyComplete
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\SistemaWeb.dll
 C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\SistemaWeb.pdb
-C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\Razor\Views\Thread\Thread.cshtml.g.cs
+C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\SistemaWeb.csprojAssemblyReference.cache
+C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\Razor\Views\ThreadPageKernel\ThreadKernel.cshtml.g.cs
+C:\Users\Duh Tk\Desktop\PROJETO ATIVIDADE\Atividades-SO\C#\SistemaWeb\obj\Debug\netcoreapp3.1\Razor\Views\ThreadPageUser\ThreadUser.cshtml.g.cs

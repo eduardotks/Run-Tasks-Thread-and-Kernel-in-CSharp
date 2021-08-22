@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SistemaWeb.Controllers
 {
-    public class ThreadController : Controller
+    public class ThreadPageKernelController : Controller
     {
-        public IActionResult Thread()
+        public IActionResult ThreadKernel()
         {
             return View();
         }
