@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Duh Tk\\Desktop\\PROJETO ATIVIDADE\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj": {}
+    "C:\\Users\\Duh Tk\\Desktop\\PROJETO AT3 SO\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Duh Tk\\Desktop\\PROJETO ATIVIDADE\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj": {
+    "C:\\Users\\Duh Tk\\Desktop\\PROJETO AT3 SO\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duh Tk\\Desktop\\PROJETO ATIVIDADE\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Duh Tk\\Desktop\\PROJETO AT3 SO\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj",
         "projectName": "SistemaWeb",
-        "projectPath": "C:\\Users\\Duh Tk\\Desktop\\PROJETO ATIVIDADE\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj",
+        "projectPath": "C:\\Users\\Duh Tk\\Desktop\\PROJETO AT3 SO\\Atividades-SO\\C#\\SistemaWeb\\SistemaWeb.csproj",
         "packagesPath": "C:\\Users\\Duh Tk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duh Tk\\Desktop\\PROJETO ATIVIDADE\\Atividades-SO\\C#\\SistemaWeb\\obj\\",
+        "outputPath": "C:\\Users\\Duh Tk\\Desktop\\PROJETO AT3 SO\\Atividades-SO\\C#\\SistemaWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duh Tk\\AppData\\Roaming\\NuGet\\NuGet.Config",

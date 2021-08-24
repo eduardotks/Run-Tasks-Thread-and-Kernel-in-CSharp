@@ -8,7 +8,7 @@
     <title>@ViewData["Title"] - Sistema Web</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!--Tema site-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-darkly.min.css" />
@@ -17,8 +17,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        /*
         // Função para formatar 1 em 01
         const zeroFill = n => {
             return ('0' + n).slice(-2);
@@ -35,6 +36,7 @@
             // Exibe na tela usando a div#data-hora
             document.getElementById('data-hora').innerHTML = dataHora;
         }, 1000);
+        */
     </script>
 </head>
 <body>
@@ -49,24 +51,29 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white waves-light waves-effect waves-light" asp-area="" asp-controller="Thread" asp-action="Thread">Thread Home</a>
+                            <a class="nav-link text-white waves-light waves-effect waves-light" asp-area="" asp-controller="ThreadPageUser" asp-action="ThreadUser">Thread User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white waves-light waves-effect waves-light" asp-area="" asp-controller="ThreadPageKernel" asp-action="ThreadKernel">Thread Kernel</a>
                         </li>
                         @*
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Funcionarios" asp-action="Index">Funcionários</a>
-                            </li>
-                         *@
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="" asp-controller="Funcionarios" asp-action="Index">Funcionários</a>
+        </li>
+                        *@
                     </ul>
                 </div>
             </div>
+            @*
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 63%">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
             </form>
+                *@
         </nav>
     </header>
     <div class="container" style="min-height:100%">
