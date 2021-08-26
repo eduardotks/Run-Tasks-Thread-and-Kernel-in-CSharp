@@ -45,7 +45,24 @@
             </div>
             <div class="col-md-3"></div>
         </div>
+        <div class="row">
 
+            <div class="col-md-3"></div>
+            <div class="col-md-2">
+                <label for="process_1" class="form-label">Processo</label>
+                <input type="text" id="process_1" placeholder="" style="border-radius: 6px; height: 43px;">
+            </div>
+            <div class="col-md-2">
+                <label for="process_2" class="form-label">Processo</label>
+                <input type="text" id="process_2" placeholder="" style="border-radius: 6px; height: 43px; ">
+            </div>
+            <div class="col-md-2">
+                <label for="process_3" class="form-label">Processo</label>
+                <input type="text" id="process_3" placeholder="" style="border-radius: 6px; height: 43px;">
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        @*
         <div class="row">
 
             <div class="col-md-3"></div>
@@ -88,6 +105,7 @@
         <br />
         <br />
         <br />
+
         <div class="row">
             <div class="col-md-3">
                 <label for="tempoId" class="form-label">Tempo(ms)</label><br />
@@ -101,7 +119,7 @@
                 <input type="number" id="numeroProcesso" style="border-radius: 5px; height: 39px;">
             </div>
         </div>
-
+        *@
         <br />
         <br />
         <br />
@@ -115,9 +133,11 @@
             <div class="col-md-2">
                 <button type="button" class="btn btn-danger" onclick="finalizaMetodo()">Finalizar</button>
             </div>
+            @*
             <div class="col-md-2">
                 <button type="button" class="btn btn-warning" onclick="limpaCampos()">Limpar</button>
             </div>
+            *@
             <div class="col-md-3">
             </div>
         </div>
@@ -126,12 +146,26 @@
 
     <script>
 
-
         function chamaMetodo() {
 
-            alert("OLá");
-        }
 
+            var data = {
+
+            }
+            $.ajax({
+                url: '/ThreadPageKernel/Execucao/',
+                type: 'POST',
+                data: data,
+                success: function (result) {
+                    if (result.sucesso) {
+                    }
+                    else {
+                        //swal("Alerta!", res.mensagemErro, "error").then(function() {});
+                    }
+                }
+            });
+
+        }
     </script>
 
 </body>

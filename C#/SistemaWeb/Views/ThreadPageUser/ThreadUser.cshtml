@@ -205,7 +205,10 @@
 
                     //--
 
-                let data = {
+                var i = 0;
+                var j = 0;
+
+                var data = {
                     tempo: $('#tempoId').val(),
                     qtdProcessso: $('#numeroProcesso').val(),
                     prioridade1: $('#prioridade1Id').val(),
@@ -219,7 +222,19 @@
                     success: function (result) {
                         if (result.sucesso)
                         {
-                            $("thread_1").val(result.thread);
+
+                            
+
+                            
+
+                            for (i; i < 3; i++) {
+                                for (j; j < data.qtdProcessso; j++) {
+                                    $("thread_1").val(result.thread);
+                                    $("thread_2").val(result.thread);
+                                    $("thread_3").val(result.thread);
+                                }
+                            }
+
                             console.log(result.thread)
                         }
                         else
