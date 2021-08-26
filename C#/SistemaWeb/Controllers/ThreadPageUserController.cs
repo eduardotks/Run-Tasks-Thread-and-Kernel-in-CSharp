@@ -18,6 +18,9 @@ namespace SistemaWeb.Controllers
         public int Processo { get; set; }
         public int NumeroDeThreads { get; set; }
         public string Prioridade { get; set; }
+
+        public List<int> thread { get; set; }
+        //List<int> thread = new List<int>();
         #endregion
 
         #region TELA
@@ -28,8 +31,12 @@ namespace SistemaWeb.Controllers
         #endregion
 
         #region ThreadUserProcess
-        public bool Execucao(int tempo, int qtdProcessso, int prioridade1, int prioridade2, int prioridade3)
+
+
+        public JsonResult Execucao(int tempo, int qtdProcessso, int prioridade1, int prioridade2, int prioridade3)
         {
+            var thread = 0;
+
             ThreadPageUserController serverObject = new ThreadPageUserController();
 
             // Create the thread object, passing in the
@@ -53,9 +60,8 @@ namespace SistemaWeb.Controllers
             // Start the thread.
             InstanceCaller.Start();
 
-
             Console.WriteLine("Chamada 1!");
-            //Thread.Sleep(Tempo);
+            
             //*******
             Thread InstanceCaller2 = new Thread(new ThreadStart(serverObject.InstanceMethod));
             if (prioridade2 == 1)
@@ -70,7 +76,6 @@ namespace SistemaWeb.Controllers
                 InstanceCaller2.Priority = ThreadPriority.Lowest;
             // Start the thread.
             InstanceCaller2.Start();
-
 
             Console.WriteLine("Chamada 2!");
             //Thread.Sleep(Tempo);
@@ -89,35 +94,45 @@ namespace SistemaWeb.Controllers
             // Start the thread.
             InstanceCaller3.Start();
             Console.WriteLine("Chamada 3!");
-            //Thread.Sleep(Tempo);
+
             //*******
 
-            return true;
+            return Json(new { sucesso = true, thread = thread });
         }
 
         // The method that will be called when the thread is started.
         public void InstanceMethod()
         {
+            
+
             string mensagemErro;
             for (int i = 0; i < Processo; i++) //numero de processos
             {
 
                 Console.WriteLine("Thread {0}: Processo {1} , Estado {2}, Priority {3}", Thread.CurrentThread.ManagedThreadId, i, Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
-                retorno(Thread.CurrentThread.ManagedThreadId);
+                //retorno(Thread.CurrentThread.ManagedThreadId);
                 Thread.Sleep(Tempo);
+
+                
             }
 
         }
-
-        public IActionResult retorno(int thread)
+        /*
+        public List<int> retorno(int thread)
         {
-            return Json(new { sucesso = true, thread = thread }) ;
-        }
+            //thread.Add(Thread.CurrentThread.ManagedThreadId);
+
+            //return thread;
+        }*/
 
         public void SuspendeThread()
         {
             Thread.CurrentThread.Interrupt();
         }
+
+
+
+
 
         #endregion
 
