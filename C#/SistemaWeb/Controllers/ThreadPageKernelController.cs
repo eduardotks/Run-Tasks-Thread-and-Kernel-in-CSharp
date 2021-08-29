@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.ServiceProcess;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,7 @@ namespace SistemaWeb.Controllers
         public int Tempo { get; set; }
         public int Processo { get; set; }
         public int NumeroDeThreads { get; set; }
+        public int stopS { get; set; }
         public string Prioridade { get; set; }
 
         public List<int> thread { get; set; }
@@ -28,22 +30,26 @@ namespace SistemaWeb.Controllers
 
 
 
-        #region ThreadUserProcess
+        #region ThreadKernelProcess
 
 
-        public void Execucao()
+        public IActionResult Execucao(int stop = 0)
         {
             //Console.WriteLine("Thread principal iniciada");
-            Thread.CurrentThread.Name = "Principal - ";
-
+            //Thread.CurrentThread.Name = "Principal - ";
+            stopS = stop;
             Thread t1 = new Thread(new ThreadStart(run));
             t1.Name = "Secundária - ";
-            t1.Start();
+            if (stopS != 9)
+            {
+                t1.Start();
+            }
+            if (stopS == 9)
+            {
+                t1.Interrupt();
+                return RedirectToAction("ThreadKernel", "ThreadPageKernel");
+            }
 
-
-            Thread t2 = new Thread(new ThreadStart(run));
-            t2.Name = "Terciária - ";
-            t2.Start();
             /*
             for (int i = 0; i < 5; i++)
             {
@@ -57,71 +63,77 @@ namespace SistemaWeb.Controllers
 
             //Console.WriteLine("Thread Principal terminada");
             //Console.Read();
+            return RedirectToAction("ThreadKernel", "ThreadPageKernel");
 
-            
         }
 
-        public static void run()
+        public void run()
         {
-
-            int cont = 1;
-            int processos = 1;
-            for (int i = 0; i < 5; i++)
+            if (stopS != 9)
             {
-                if (cont == 1)
+                int cont = 1;
+                int processos = 1;
+                for (int i = 0; i < 2; i++)
                 {
-                    Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
-                    Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId + 0, processos);
-                    Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 1, processos);
-                    Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 2, processos);
-                    cont++;
-                    processos++;
-                    
+                    if (cont == 1)
+                    {
+                        Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
+                        Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId + 0, processos);
+                        Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 1, processos);
+                        Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 2, processos);
+                        cont++;
+                        processos++;
 
+                        Thread.Sleep(4000);
+
+                    }
+                    if (cont == 2)
+                    {
+                        Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
+                        Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId, processos);
+                        cont++;
+                        processos++;
+                        Thread.Sleep(4000);
+                    }
+                    if (cont == 3)
+                    {
+                        Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
+                        Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId + 0, processos);
+                        Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 1, processos);
+                        cont++;
+                        processos++;
+                        Thread.Sleep(4000);
+                    }
+                    if (cont == 4)
+                    {
+                        Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
+                        Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId + 0, processos);
+                        Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 3, processos);
+
+                        processos = 1;
+                        cont = 1;
+                        Thread.Sleep(4000);
+
+                    }
+                    Thread.Sleep(4000);
                 }
-                if (cont == 2)
-                {
-                    Console.WriteLine("Estado {0}, Priority {1}",Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
-                    Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId, processos);
-                    cont++;
-                    processos++;
-                    
-
-                }
-                if (cont == 3)
-                {
-                    Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
-                    Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId + 0, processos);
-                    Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 1, processos);
-
-                    cont++;
-                    processos++;
-                    
-
-                }
-                if (cont == 4)
-                {
-                    Console.WriteLine("Estado {0}, Priority {1}", Thread.CurrentThread.ThreadState, Thread.CurrentThread.Priority);
-                    Console.WriteLine("Thread {0}: Processo {1}", Thread.CurrentThread.ManagedThreadId + 0, processos);
-                    Console.WriteLine("Thread {0}: Processo {1} ", Thread.CurrentThread.ManagedThreadId + 3, processos);
-
-                    processos = 1;
-                    cont = 1;
-                    Thread.Sleep(3000);
-                    
-                }
-
             }
         }
         #endregion
 
-        public void SuspendeThread()
+
+        public IActionResult SuspendeThread()
         {
             Thread.CurrentThread.Interrupt();
+
+            return RedirectToAction("ThreadKernel", "ThreadPageKernel");
         }
 
     }
+
+
 }
+
 
 /*       public void InstanceMethod()
         {
