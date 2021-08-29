@@ -1,7 +1,4 @@
 ﻿
-@{
-    ViewData["Title"] = "Thread";
-}
 
 
 <head>
@@ -10,7 +7,7 @@
 
     <meta charset="utf-8">
 
-    <title>Blank template</title>
+    <title>Simulador Thread Kernel</title>
 
     <!-- Load external CSS styles -->
     <link rel="stylesheet" href="styles.css">
@@ -27,7 +24,7 @@
     <center><h1>Funcionamento de Thread - Modo Kernel</h1></center>
     <br />
     <div style="border:1px solid black;border-radius: 14px;padding: 29px;">
-
+        @*
         <div class="row">
 
             <div class="col-md-3"></div>
@@ -45,7 +42,8 @@
             </div>
             <div class="col-md-3"></div>
         </div>
-        <div class="row">
+        *@
+        @*        <div class="row">
 
             <div class="col-md-3"></div>
             <div class="col-md-2">
@@ -62,6 +60,8 @@
             </div>
             <div class="col-md-3"></div>
         </div>
+            *@
+
         @*
         <div class="row">
 
@@ -125,20 +125,17 @@
         <br />
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-5">
             </div>
             <div class="col-md-2">
                 <button type="button" class="btn btn-success" onclick="chamaMetodo()">Iniciar</button>
             </div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-danger" onclick="finalizaMetodo()">Finalizar</button>
-            </div>
             @*
             <div class="col-md-2">
-                <button type="button" class="btn btn-warning" onclick="limpaCampos()">Limpar</button>
+                <button type="button" class="btn btn-danger" onclick="finalizaThread()">Finalizar</button>
             </div>
             *@
-            <div class="col-md-3">
+            <div class="col-md-5">
             </div>
         </div>
     </div>
@@ -166,6 +163,29 @@
             });
 
         }
+
+        
+        function finalizaThread() {
+            var data = {
+                stop : 9
+            }
+            $.ajax({
+                url: '/ThreadPageKernel/Execucao/',
+                type: 'POST',
+                data: data,
+                success: function (result) {
+                    if (result) {
+                        //window.location.reload();
+                    }
+                    else {
+                        
+                    }
+                }
+            });
+
+        }
+
+        
     </script>
 
 </body>
